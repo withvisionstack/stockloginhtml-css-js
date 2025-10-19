@@ -1,0 +1,335 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  padding-top: 20px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("images/grad2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.introduction h1 {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+}
+
+.container label {
+  display: block;
+  color: white;
+  margin-bottom: 5px;
+  font-size: 14px;
+  text-align: left;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container input[type="text"] {
+  padding: 15px;
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 5px auto 15px auto;
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  border: none;
+  color: azure;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.senha-area {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto 15px auto;
+}
+
+.senha-area label {
+  display: block;
+  color: white;
+  margin-bottom: 5px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 15px 45px 15px 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: azure;
+  font-size: 16px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.toggle-olho {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  user-select: none;
+}
+
+#loginForm {
+  background: rgba(27, 7, 204, 0.7);
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  margin-bottom: 50px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.container p {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.container h1 {
+  color: #fff3f3;
+}
+
+.container a {
+  color: rgb(7, 114, 245);
+  text-decoration: none;
+}
+
+.container a:hover {
+  color: red;
+  border-bottom: 2px solid red;
+}
+
+.container button {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  width: 100%;
+  max-width: 350px;
+  height: 45px;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
+  border: none;
+  padding: 10px;
+  margin-top: 25px;
+}
+
+.container button:hover {
+  transform: scale(1.03);
+  transition: all 0.2s ease;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 15px auto;
+  max-width: 350px;
+  color: white;
+  font-size: 14px;
+}
+
+.remember-me input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.remember-me label {
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Telas muito pequenas: até 360px */
+@media (max-width: 360px) {
+  .container input[type="text"] {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
+  }
+  .senha-area {
+    width: 100%;
+  }
+  .password-wrapper input {
+    font-size: 14px;
+    padding: 12px 40px 12px 12px;
+  }
+  .container button {
+    font-size: 14px;
+    height: 45px;
+    width: 100%;
+  }
+  .introduction h1 {
+    font-size: 14px;
+  }
+  #loginForm {
+    padding: 20px;
+  }
+}
+
+/* Telas pequenas: entre 407px e 479px */
+@media (min-width: 407px) and (max-width: 479px) {
+  .container input[type="text"] {
+    width: 100%;
+    font-size: clamp(14px, 2vw, 16px);
+    padding: 12px;
+    box-sizing: border-box;
+  }
+  .senha-area {
+    width: 100%;
+  }
+  .password-wrapper input {
+    font-size: 14px;
+    padding: 12px 40px 12px 12px;
+  }
+  .container button {
+    font-size: 14px;
+    height: 45px;
+    width: 100%;
+  }
+  .introduction h1 {
+    font-size: 14px;
+  }
+  #loginForm {
+    padding: 20px;
+  }
+}
+
+/* Telas até 480px (genérico) */
+@media (max-width: 480px) {
+  .container input[type="text"] {
+    width: 100%;
+    font-size: 15px;
+  }
+  .senha-area {
+    width: 100%;
+  }
+  .container button {
+    font-size: 15px;
+    height: 45px;
+    width: 100%;
+  }
+  .remember-me {
+    font-size: 13px;
+  }
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Telas até 600px */
+@media (max-width: 600px) {
+  #loginForm {
+    width: 90%;
+    padding: 25px;
+  }
+  .container input[type="text"] {
+    font-size: 16px;
+  }
+  .senha-area {
+    width: 100%;
+  }
+  .remember-me {
+    font-size: 13px;
+  }
+  .container h1 {
+    font-size: 18px;
+  }
+  .container p {
+    font-size: 14px;
+  }
+}
+
+/* Telas grandes: 768px ou mais */
+@media (min-width: 768px) {
+  #loginForm {
+    padding: 50px;
+    max-width: 600px;
+  }
+
+  .container input[type="text"] {
+    width: 100%;
+    max-width: 450px;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .senha-area,
+  .container label,
+  .container button,
+  .remember-me {
+    max-width: 450px;
+  }
+
+  .container button {
+    font-size: 16px;
+    height: 45px;
+  }
+
+  .introduction h1 {
+    font-size: 20px;
+  }
+
+  .container h1 {
+    font-size: 22px;
+  }
+
+  .container p {
+    font-size: 16px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .remember-me {
+    font-size: 15px;
+  }
+}

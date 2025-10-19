@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+  <title>Desafio 1 - Tela de Login</title>
+</head>
+<body>
+  <form id="loginForm">
+    <div class="img-container">
+      <img src="images/user5.png" alt="Avatar do usuário" />
+    </div>
+
+    <div class="container">
+      <div class="introduction">
+        <h1>BEM VINDO - FAÇA O LOGIN PARA PROSSEGUIR</h1>
+      </div>
+
+      <label for="usuario">Entre com seu Usuário ou Email</label>
+      <input id="usuario" name="usuario" type="text" placeholder="👤 user" required />
+
+      <div class="senha-area">
+        <label for="senha" >Entre com sua senha</label>
+        <div class="password-wrapper">
+          <input id="senha" name="senha" type="password" placeholder="🔒 password" required />
+          <span class="toggle-olho">👁</span>
+        </div>
+      </div>
+
+      <div class="remember-me">
+        <input type="checkbox" id="remember" name="remember" />
+        <label for="remember">Lembrar-me</label>
+      </div>
+
+      <button type="submit"  id="enviar">Login</button>
+
+      <p class="cadastro">
+        Não tem uma conta ? <strong>Cadastre-se agora mesmo</strong>
+        <a href="#Signup">Cadastro</a><p>Esqueceu a senha ? <a href="#resetpassword">Resetar a senha</a></p>
+    </div>
+  </form>
+</body>
+</html>
